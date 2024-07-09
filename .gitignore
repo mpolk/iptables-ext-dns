@@ -42,3 +42,21 @@ modules/kernel.h
 
 .deps
 .libs
+
+**/Makefile.in
+**/Makefile
+aclocal.m4
+configure
+misc/*
+config.log
+config.status
+include/stamp-h1
+iptables-ext-dns.spec
+libtool
+include/kernel.h
+modules/.*.cmd
+modules/Module.symvers
+modules/modules.order
+modules/*.mod
+modules/*.mod.c
+
