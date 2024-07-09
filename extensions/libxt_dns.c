@@ -386,6 +386,9 @@ static struct xtables_match dns_match = {
     .extra_opts = dns_opts,
 };
 
+#ifndef _init
+#define _init __attribute__((constructor)) _INIT
+#endif
 void _init(void) {
     xtables_register_match(&dns_match);
 }

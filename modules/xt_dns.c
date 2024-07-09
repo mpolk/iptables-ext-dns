@@ -252,7 +252,7 @@ static bool dns_mt6(const struct sk_buff *skb, XT_PARAM *par) {
 
     currenthdr = ih->nexthdr;
     DEBUG_PRINT("start opt loop");
-    while (currenthdr != NEXTHDR_NONE && ip6t_ext_hdr(currenthdr)) {
+    while (currenthdr != NEXTHDR_NONE && ipv6_ext_hdr(currenthdr)) {
         DEBUG_PRINT("optloop %u", currenthdr);
         hp = skb_header_pointer(skb, ptr, sizeof(_hdr), &_hdr);
         if (hp == NULL) {
